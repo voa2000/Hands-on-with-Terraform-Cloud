@@ -1,0 +1,13 @@
+name: prod-PR
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  staging-healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Healthcheck the staging endpoint from Viv
+        run: curl http://staging.lynx.february.ldn.devopsplayground.com:2048/
