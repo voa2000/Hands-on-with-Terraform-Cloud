@@ -18,3 +18,7 @@ resource "aws_route53_record" "www" {
   ttl     = "300"
   records = [aws_eip.lb.public_ip]
 }
+resource "aws_eip" "lb" {
+  instance = aws_instance.web.id
+  vpc      = true
+}
