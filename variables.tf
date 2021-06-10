@@ -7,6 +7,7 @@ variable "animal" {
 variable "env" {
   type        = string
   description = "The environment ('prod' or 'staging'). Set as a variable in Terraform Cloud."
+  default     = "dev"
 }
 
 variable "r53-zone" {
