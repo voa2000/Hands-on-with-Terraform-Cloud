@@ -1,6 +1,7 @@
 variable "animal" {
   type        = string
   description = "A unique identifier for each DPG guest. Set as a variable in Terraform Cloud."
+  default = "cow"
 }
 
 variable "env" {
